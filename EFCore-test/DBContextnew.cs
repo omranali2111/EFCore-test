@@ -14,5 +14,7 @@ namespace EFCore_test
 
             options.UseSqlServer("Data Source=(local);Initial Catalog=EFCore1; Integrated Security=true; TrustServerCertificate=True");
         }
+       public DbSet<Employee> employees { get; set; }
+
     }
 }
