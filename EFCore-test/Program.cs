@@ -7,36 +7,40 @@ internal class Program
     {
         using (var dbContext = new DBContextnew())
         {
-            //var newEmployee = new Employee
-            //{
-            //    Name = "omran",
-            //    Salary = 1300
-            //};
-            //var newEmployee1 = new Employee
-            //{
-            //    Name = "ali",
-            //    Salary = 1500
-            //};
+            var newEmployee = new Employee
+            {
+                Name = "omran",
+                Salary = 1300,
+                dept_id = 1
+            };
 
-            // Add the new Employee object to the DbSet
-            //dbContext.employees.Add(newEmployee);
-            //dbContext.employees.Add(newEmployee1);
+            var newEmployee1 = new Employee
+            {
+                Name = "ali",
+                Salary = 1500,
+                dept_id = 2
+            };
+
+            // Add the new Employee objects to the DbSet
+            dbContext.employees.Add(newEmployee);
+            dbContext.employees.Add(newEmployee1);
 
             // Save the changes to the database
-            //dbContext.SaveChanges();
+            dbContext.SaveChanges();
 
-            Employee em1 = dbContext.employees.Where(x => x.Id == 1).FirstOrDefault();
+            Console.WriteLine("Employees inserted successfully.");
+            //Employee em1 = dbContext.employees.Where(x => x.Id == 1).FirstOrDefault();
 
-            if (em1 != null)
-            {
-                Console.WriteLine("Employee found:");
-                Console.WriteLine($"Name: {em1.Name}");
-                Console.WriteLine($"Salary: {em1.Salary}");
-            }
-            else
-            {
-                Console.WriteLine("Employee with ID 1 not found.");
-            }
+            //if (em1 != null)
+            //{
+            //    Console.WriteLine("Employee found:");
+            //    Console.WriteLine($"Name: {em1.Name}");
+            //    Console.WriteLine($"Salary: {em1.Salary}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Employee with ID 1 not found.");
+            //}
 
             //Employee em2 = dbContext.employees.First(x => x.Id == 4);
 
@@ -50,19 +54,41 @@ internal class Program
             //{
             //    Console.WriteLine("Employee with ID 4 or 3 not found.");
             //}
-            Employee emp3 = dbContext.employees.FirstOrDefault(x => x.Id == 1);
-            if (emp3 != null)
-            {
-                emp3.Salary = 3000;
-                dbContext.employees.Update(emp3);
-                dbContext.SaveChanges();
-            }
-            else
-            {
-                Console.WriteLine("user not found");
-            }
+            //Employee emp3 = dbContext.employees.FirstOrDefault(x => x.Id == 1);
+            //if (emp3 != null)
+            //{
+            //    emp3.Salary = 3000;
+            //    dbContext.employees.Update(emp3);
+            //    dbContext.SaveChanges();
+            //}
+            //else
+            //{
+            //    Console.WriteLine("user not found");
+            //}
 
+
+            // Create a new Department object
+            var newDepartment1 = new Department
+                {
+                    Name = "IT",
+                    Description = "IT computer department"
+                };
+            var newDepartment2 = new Department
+            {
+                Name = "engineering",
+                Description = "engineering department"
+            };
+
+            // Add the new Department object to the DbSet
+            //dbContext.departments.Add(newDepartment1);
+            //dbContext.departments.Add(newDepartment2);
+
+            //// Save the changes to the database
+            //dbContext.SaveChanges();
+
+            //    Console.WriteLine("Department inserted successfully.");
            
+
 
         }
 
