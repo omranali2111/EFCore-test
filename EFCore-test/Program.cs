@@ -38,20 +38,31 @@ internal class Program
                 Console.WriteLine("Employee with ID 1 not found.");
             }
 
-            Employee em2 = dbContext.employees.First(x => x.Id == 4);
+            //Employee em2 = dbContext.employees.First(x => x.Id == 4);
 
-            if (em2 != null)
+            //if (em2 != null)
+            //{
+            //    dbContext.employees.Remove(em2);
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine("Employee removed successfully.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Employee with ID 4 or 3 not found.");
+            //}
+            Employee emp3 = dbContext.employees.FirstOrDefault(x => x.Id == 1);
+            if (emp3 != null)
             {
-                dbContext.employees.Remove(em2);
+                emp3.Salary = 3000;
+                dbContext.employees.Update(emp3);
                 dbContext.SaveChanges();
-                Console.WriteLine("Employee removed successfully.");
             }
             else
             {
-                Console.WriteLine("Employee with ID 4 or 3 not found.");
+                Console.WriteLine("user not found");
             }
 
-            dbContext.SaveChanges();
+           
 
         }
 

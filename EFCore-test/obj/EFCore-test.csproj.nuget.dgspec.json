@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ict\\Desktop\\code-TRA\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj": {}
+    "C:\\Users\\ict\\Desktop\\code-TRA\\EntityFrameworkCore\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ict\\Desktop\\code-TRA\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj": {
+    "C:\\Users\\ict\\Desktop\\code-TRA\\EntityFrameworkCore\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ict\\Desktop\\code-TRA\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj",
+        "projectUniqueName": "C:\\Users\\ict\\Desktop\\code-TRA\\EntityFrameworkCore\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj",
         "projectName": "EFCore-test",
-        "projectPath": "C:\\Users\\ict\\Desktop\\code-TRA\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj",
+        "projectPath": "C:\\Users\\ict\\Desktop\\code-TRA\\EntityFrameworkCore\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj",
         "packagesPath": "C:\\Users\\ict\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ict\\Desktop\\code-TRA\\EFCore-test\\Day1\\EFCore-test\\obj\\",
+        "outputPath": "C:\\Users\\ict\\Desktop\\code-TRA\\EntityFrameworkCore\\EFCore-test\\Day1\\EFCore-test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ict\\AppData\\Roaming\\NuGet\\NuGet.Config",

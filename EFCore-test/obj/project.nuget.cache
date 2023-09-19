@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fAFpKIPHEV8pwRwjG8SneE39l8MqCpSG6ZWyX8QWW1tCXF3ykE+pAo1DWShnIHCGOZGDOZHy5mN0Rs7B9CA1Uw==",
+  "dgSpecHash": "W412Y1ceMso4uoYY52xaWO0NUgFfNQxKH8DBsOF18yyVKyurxS7cIpVfHQFURd7UZ7jYw636Acz8lkRVNbWewQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ict\\Desktop\\code-TRA\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj",
+  "projectFilePath": "C:\\Users\\ict\\Desktop\\code-TRA\\EntityFrameworkCore\\EFCore-test\\Day1\\EFCore-test\\EFCore-test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ict\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ict\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
