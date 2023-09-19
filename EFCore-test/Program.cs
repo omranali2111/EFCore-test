@@ -7,26 +7,26 @@ internal class Program
     {
         using (var dbContext = new DBContextnew())
         {
-            var newEmployee = new Employee
-            {
-                Name = "omran",
-                Salary = 1300,
-                dept_id = 1
-            };
+            //var newEmployee = new Employee
+            //{
+            //    Name = "omran",
+            //    Salary = 1300,
+            //    dept_id = 1
+            //};
 
-            var newEmployee1 = new Employee
-            {
-                Name = "ali",
-                Salary = 1500,
-                dept_id = 2
-            };
+            //var newEmployee1 = new Employee
+            //{
+            //    Name = "ali",
+            //    Salary = 1500,
+            //    dept_id = 2
+            //};
 
-            // Add the new Employee objects to the DbSet
-            dbContext.employees.Add(newEmployee);
-            dbContext.employees.Add(newEmployee1);
+            //// Add the new Employee objects to the DbSet
+            //dbContext.employees.Add(newEmployee);
+            //dbContext.employees.Add(newEmployee1);
 
-            // Save the changes to the database
-            dbContext.SaveChanges();
+            //// Save the changes to the database
+            //dbContext.SaveChanges();
 
             Console.WriteLine("Employees inserted successfully.");
             //Employee em1 = dbContext.employees.Where(x => x.Id == 1).FirstOrDefault();
@@ -87,8 +87,21 @@ internal class Program
             //dbContext.SaveChanges();
 
             //    Console.WriteLine("Department inserted successfully.");
+
+            var query = from employee in dbContext.employees
+                        join department in dbContext.departments
+                        on employee.dept_id equals department.id
+                        select new
+                        {
+                            EmployeeName = employee.Name,
+                            DepartmentName = department.Name
+                        };
            
 
+            foreach (var result in query)
+            {
+                Console.WriteLine($"Employee Name: {result.EmployeeName}, Department Name: {result.DepartmentName}");
+            }
 
         }
 
