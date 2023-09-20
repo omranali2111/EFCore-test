@@ -88,20 +88,34 @@ internal class Program
 
             //    Console.WriteLine("Department inserted successfully.");
 
-            var query = from employee in dbContext.employees
-                        join department in dbContext.departments
-                        on employee.dept_id equals department.id
-                        select new
-                        {
-                            EmployeeName = employee.Name,
-                            DepartmentName = department.Name
-                        };
+            //var query = from employee in dbContext.employees
+            //            join department in dbContext.departments
+            //            on employee.dept_id equals department.id
+            //            select new
+            //            {
+            //                EmployeeName = employee.Name,
+            //                DepartmentName = department.Name
+            //            };
            
+
+            //foreach (var result in query)
+            //{
+            //    Console.WriteLine($"Employee Name: {result.EmployeeName}, Department Name: {result.DepartmentName}");
+            //}
+
+            var query = dbContext.employees
+    .Include(e => e.department) // Include the related department data
+    .Select(e => new
+    {
+        EmployeeName = e.Name,
+        DepartmentName = e.department.Name
+    });
 
             foreach (var result in query)
             {
                 Console.WriteLine($"Employee Name: {result.EmployeeName}, Department Name: {result.DepartmentName}");
             }
+
 
         }
 
